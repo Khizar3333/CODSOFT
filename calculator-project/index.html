@@ -1,0 +1,111 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+    .calculator {
+      width: 220px;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 0 auto;
+    }
+
+    .calculator input[type="button"] {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      margin: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .calculator input[type="text"] {
+      width: 200px;
+      height: 30px;
+      font-size: 18px;
+      margin: 5px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="result" readonly>
+    <input type="button" value="7" onclick="append('7')">
+    <input type="button" value="8" onclick="append('8')">
+    <input type="button" value="9" onclick="append('9')">
+    <input type="button" value="/" onclick="append('/')">
+    <br>
+    <input type="button" value="4" onclick="append('4')">
+    <input type="button" value="5" onclick="append('5')">
+    <input type="button" value="6" onclick="append('6')">
+    <input type="button" value="*" onclick="append('*')">
+    <br>
+    <input type="button" value="1" onclick="append('1')">
+    <input type="button" value="2" onclick="append('2')">
+    <input type="button" value="3" onclick="append('3')">
+    <input type="button" value="-" onclick="append('-')">
+    <br>
+    <input type="button" value="0" onclick="append('0')">
+    <input type="button" value="." onclick="append('.')">
+    <input type="button" value="=" onclick="calculate()">
+    <input type="button" value="+" onclick="append('+')">
+    <br>
+    <input type="button" value="Clear" onclick="clearResult()">
+  </div>
+
+  <script>
+    function append(value) {
+      document.getElementById('result').value += value;
+    }
+
+    function calculate() {
+      var result = document.getElementById('result').value;
+      var answer = eval(result);
+      document.getElementById('result').value = answer;
+    }
+
+    function clearResult() {
+      document.getElementById('result').value = '';
+    }
+  </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="screen" class="screen" readonly>
+        <button class="button" onclick="clearScreen()">C</button>
+        <button class="button" onclick="appendToScreen('7')">7</button>
+        <button class="button" onclick="appendToScreen('8')">8</button>
+        <button class="button" onclick="appendToScreen('9')">9</button>
+        <button class="button" onclick="appendToScreen('4')">4</button>
+        <button class="button" onclick="appendToScreen('5')">5</button>
+        <button class="button" onclick="appendToScreen('6')">6</button>
+        <button class="button" onclick="appendToScreen('1')">1</button>
+        <button class="button" onclick="appendToScreen('2')">2</button>
+        <button class="button" onclick="appendToScreen('3')">3</button>
+        <button class="button" onclick="appendToScreen('0')">
+            0
+        </button>
+        <button class="button" onclick="appendToScreen('+')">+</button>
+        <button class="button" onclick="appendToScreen('-')">-</button>
+        <button class="button" onclick="appendToScreen('*')">*</button>
+        <button class="button" onclick="appendToScreen('/')">/</button>
+        <button class="button" onclick="removeLastCharacter()">←</button>
+        <button class="button" onclick="compute()">=</button>
+    </div>
+
+    <script src="/index.js">
+       
+    </script>
+</body>
+</html>
